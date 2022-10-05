@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Welcome to Book {{ book.pk }} page</h1>
+    <h2>{{ book.title }}</h2>
+    <p>{{ book.description }}</p>
+
+    <a href="{% url 'my_app:book-list' %}">Go back to list page</a>
+</body>
+</html>

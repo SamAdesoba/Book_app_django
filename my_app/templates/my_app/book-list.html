@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <ul>
+        {% for book in books %}
+            <li><a href="{% url 'my_app:book-detail' book.pk %}">{{ book.title }}</a></li>
+        {% endfor %}
+    </ul>
+
+    <ul>
+        <a href="{% url 'my_app:book-list-fiction' %}">list of FICTION books</a><br>
+        <a href="{% url 'my_app:book-list-price' %}">list of books with price less than $80.00</a>
+    </ul>
+</body>
+</html>
